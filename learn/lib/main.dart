@@ -40,7 +40,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Todo List"),
+          title: TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            style: TextStyle(color: Colors.white, fontSize: 20),
+            decoration: InputDecoration(
+                labelText: "New", labelStyle: TextStyle(color: Colors.white)),
+          ),
         ),
         body: ListView.builder(
           itemCount: widget.items.length,
@@ -53,7 +58,6 @@ class _HomePageState extends State<HomePage> {
               value: item.done,
               onChanged: (value) {
                 print(value);
-
                 setState(() {
                   item.done = value;
                 });
