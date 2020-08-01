@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity),
-      home: Homeage(),
+      home: HomePage(),
     );
   }
 }
@@ -25,7 +25,7 @@ class HomePage extends StatefulWidget {
     items = [];
 
     items.add(Item(title: "Ola", done: true));
-    items.add(Item(title: "Agora Sim"), done: false);
+    items.add(Item(title: "Agora Sim", done: false));
     items.add(Item(title: "Adolfo E mau", done: true));
   }
 

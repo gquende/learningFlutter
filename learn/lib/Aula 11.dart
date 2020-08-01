@@ -22,17 +22,25 @@ class App extends StatelessWidget {
 class HomePage extends StatefulWidget {
   var items = new List<Item>();
 
-  HomePage() {
-    items = [];
+  void teste(){
 
+    Sc
+    print("Ola");
+  }
+
+  HomePage() {
+
+    items = [];
     items.add(Item(title: "Item 1", done: false));
     items.add(Item(title: "Item 2", done: true));
     items.add(Item(title: "Item 3", done: false));
     items.add(Item(title: "Item 4", done: true));
   }
 
+
   @override
   _HomePageState createState() => _HomePageState();
+
 }
 
 class _HomePageState extends State<HomePage> {
@@ -49,6 +57,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  //Funcao que remove intem do array
   void remove(int index) {
     setState(() {
       widget.items.removeAt(index);
