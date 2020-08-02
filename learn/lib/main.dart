@@ -41,9 +41,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var controladorEntrada =
-      new TextEditingController(); //Classe que cria um controlador para insercao de txto
-
+  var controladorEntrada = new TextEditingController(); //Classe que cria um controlador para insercao de txto
 
   _HomePageStage(){
     load();
@@ -58,7 +56,6 @@ class _HomePageState extends State<HomePage> {
       save();
     });
   }
-
   void remove(int index) {
     setState(() {
       widget.items.removeAt(index);
@@ -75,7 +72,6 @@ class _HomePageState extends State<HomePage> {
         List<Item> result= decoded.map((x) => Item.fromJson(x)).toList();//Converte os em Json e em sequida nu ma lista
       }
   }
-
   save() async {
     var prefs= await SharedPreferences.getInstance();
     await prefs.setString('data', jsonEncode(widget.items));//Salva os dados em Json
@@ -99,7 +95,6 @@ class _HomePageState extends State<HomePage> {
         itemCount: widget.items.length,
         itemBuilder: (BuildContext context, int index) {
           final item = widget.items[index];
-
           return Dismissible(
             key: Key(item.title),
             child: CheckboxListTile(
@@ -128,3 +123,4 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+c
