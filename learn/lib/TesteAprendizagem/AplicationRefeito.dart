@@ -53,7 +53,11 @@ Widget build(BuildContext context) {
       style: TextStyle(color: Colors.white, fontSize: 18),
       decoration: InputDecoration(labelText: "Insira a tarefa",labelStyle: TextStyle(color: Colors.white)),
     ),),
-body: ListView.builder(itemCount: widget.colecao.length,),
+body: ListView.builder(itemCount: widget.colecao.length,
+itemBuilder: (context, index){
+
+  return CheckboxListTile(title: Text(widget.colecao[index].title), value: widget.colecao[index].done,);
+},),
   ) ;
 
   }

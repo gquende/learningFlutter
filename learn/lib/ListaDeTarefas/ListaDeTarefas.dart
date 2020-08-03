@@ -67,10 +67,10 @@ class _HomePageState extends State<HomePage> {
     var prefs= await SharedPreferences.getInstance();//Cria uma instancia para a base de Dados
     var data= prefs.getString('data');
     if(data!=null)
-      {
-        Iterable decoded= jsonDecode(data);//
-        List<Item> result= decoded.map((x) => Item.fromJson(x)).toList();//Converte os em Json e em sequida nu ma lista
-      }
+    {
+      Iterable decoded= jsonDecode(data);//
+      List<Item> result= decoded.map((x) => Item.fromJson(x)).toList();//Converte os em Json e em sequida nu ma lista
+    }
   }
   save() async {
     var prefs= await SharedPreferences.getInstance();
