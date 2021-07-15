@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:learn/Bloc/bloc_learning.dart';
+import 'package:learn/Bloc/home.dart';
 import 'package:learn/models/item.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -18,6 +18,6 @@ class App extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: BlocTest());
+        home: Home());
   }
 }

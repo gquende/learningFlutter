@@ -22,14 +22,11 @@ class App extends StatelessWidget {
 class HomePage extends StatefulWidget {
   var items = new List<Item>();
 
-  void teste(){
-
-    Sc
+  void teste() {
     print("Ola");
   }
 
   HomePage() {
-
     items = [];
     items.add(Item(title: "Item 1", done: false));
     items.add(Item(title: "Item 2", done: true));
@@ -37,10 +34,8 @@ class HomePage extends StatefulWidget {
     items.add(Item(title: "Item 4", done: true));
   }
 
-
   @override
   _HomePageState createState() => _HomePageState();
-
 }
 
 class _HomePageState extends State<HomePage> {
